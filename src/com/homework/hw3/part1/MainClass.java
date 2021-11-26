@@ -1,6 +1,5 @@
 package com.homework.hw3.part1;
 
-
 import java.util.LinkedList;
 
 public class MainClass {
@@ -12,7 +11,6 @@ public class MainClass {
             myList.add(i);
             list.add(i);
         }
-
 
         System.out.println("add in MyLinkedList: " + addTime(myList, 1000));
         System.out.println("add in LinkedList: " + addTime(list, 1000));
@@ -50,8 +48,6 @@ public class MainClass {
         System.out.println(intArray2.getClass());
         myList2.clear();
         System.out.println(myList2);
-
-
     }
 
     static long addTime(MyLinkedList<Integer> list, int n) {
@@ -73,33 +69,29 @@ public class MainClass {
     }
 
     static long indexOfTime(MyLinkedList<Integer> list, int n) {
-        int index = -1;
         long startTime = System.nanoTime();
-        index = list.indexOf(n);
+        list.indexOf(n);
         long endTime = System.nanoTime();
         return endTime - startTime;
     }
 
     static long indexOfTime(LinkedList<Integer> list, int n) {
-        int index = -1;
         long startTime = System.nanoTime();
-        index = list.indexOf(n);
+        list.indexOf(n);
         long endTime = System.nanoTime();
         return endTime - startTime;
     }
 
     static long removeTime(MyLinkedList<Integer> list, int n) {
-        Integer deleted;
         long startTime = System.nanoTime();
-        deleted = list.remove(n);
+        list.remove(n);
         long endTime = System.nanoTime();
         return endTime - startTime;
     }
 
     static long removeTime(LinkedList<Integer> list, int n) {
-        Integer deleted;
         long startTime = System.nanoTime();
-        deleted = list.remove(100);
+        list.remove(n);
         long endTime = System.nanoTime();
         return endTime - startTime;
     }
